@@ -99,5 +99,13 @@
             }
             expect(whereTheObjectHasNoDate).to.throw(Error);
         });
+		// again, similar to the test for the slideshow, this will not accept empty objects.
+		it('should have a Message POST length of at least one character', function() {
+            var msgPostLength = function() {
+            	// an empty {} is being passed here so as expected below, the test should throw an Error.
+            	chatSender({message: "" >= 1});
+            }
+            expect(msgPostLength).to.throw(Error);
+        });
     });    
 })();
