@@ -60,6 +60,10 @@
 
 	describe('acceptable standards for data to POST to the server', function() {
         
+		// 7:41am 06/02/14 - This needs to be modified. I believe it should actually accept a 'string' as its argument,
+		// not an object. Need to continue working on this. Same principles apply to what's going out as to what's
+		// being pulled in. 
+
         // similar to the test for the slideshow - this will only accept objects as opposed to only accepting arrays.
         it('should only accept an object as its argument', function() {
             var notAnObject = function() {
@@ -99,10 +103,11 @@
             }
             expect(whereTheObjectHasNoDate).to.throw(Error);
         });
-		// again, similar to the test for the slideshow, this will not accept empty objects.
+		
+		
 		it('should have a Message POST length of at least one character', function() {
             var msgPostLength = function() {
-            	// an empty {} is being passed here so as expected below, the test should throw an Error.
+            	// 7:35am 06/02/14 - this is not formatted properly at this point. need to revisit.
             	chatSender({message: "" >= 1});
             }
             expect(msgPostLength).to.throw(Error);
