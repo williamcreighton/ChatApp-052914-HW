@@ -12,7 +12,7 @@
 
 // }; 
 
-// $(".messages-container").scrollTop($('.messages-display').height(300));
+$(".messages-container").scrollTop($('.messages-display').height(300));
 
 
 // declaring the rendered chatData information as a variable with the value of an underscore
